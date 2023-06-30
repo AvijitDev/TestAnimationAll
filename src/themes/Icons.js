@@ -1,0 +1,26 @@
+const Icons = {
+  arrow_down: require('../assets/icon/arrow_down.png'),
+  arrow_right: require('../assets/icon/arrow_right.png'),
+  arrow_up: require('../assets/icon/arrow_up.png'),
+  right: require('../assets/icon/right.png'),
+  search: require("../assets/icon/search.png"),
+  bananas: require("../assets/icon/bananas.png"),
+  coconut_tree: require("../assets/icon/coconut_tree.png"),
+  sea: require("../assets/icon/sea.png"),
+  tiki: require("../assets/icon/tiki.png"),
+  ukelele: require("../assets/icon/ukelele.png"),
+  bikini: require("../assets/icon/bikini.png"),
+  tortoise: require("../assets/icon/tortoise.png"),
+  fish: require("../assets/icon/fish.png"),
+  maracas: require("../assets/icon/maracas.png"),
+  sunbed: require("../assets/icon/sunbed.png"),
+  swimsuit: require("../assets/icon/swimsuit.png"),
+  tropical_bar: require("../assets/icon/tropical_bar.png"),
+  fire: require("../assets/icon/fire.png"),
+  badge: require("../assets/icon/badge.png"),
+  energy: require("../assets/icon/energy.png"),
+  chemistry: require("../assets/icon/chemistry.png"),
+  drop: require("../assets/icon/drop.png"),
+};
+
+export default Icons;

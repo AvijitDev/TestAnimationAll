@@ -1,0 +1,53 @@
+import React from 'react';
+import {Text, View, StyleSheet, Easing} from 'react-native';
+import CarsList from './CarsList';
+import CarsDetails from './CarsDetails';
+import {enableScreens} from 'react-native-screens';
+import {createSharedElementStackNavigator} from 'react-navigation-shared-element';
+
+enableScreens();
+
+const Stack = createSharedElementStackNavigator();
+
+export default function MainSharedEleFive() {
+  return (
+    <Stack.Navigator
+      initialRouteName="CarsList"
+      screenOptions={{headerShown: false}}>
+      <Stack.Screen name={'CarsList'} component={CarsList} />
+      <Stack.Screen
+        name={'CarsDetails'}
+        component={CarsDetails}
+        options={() => ({
+          gestureEnabled: false,
+          transitionSpec: {
+            open: {
+              animation: 'timing',
+              config: {duration: 500},
+            },
+            close: {
+              animation: 'timing',
+              config: {duration: 500},
+            },
+          },
+          cardStyleInterpolator: ({current: {progress}}) => {
+            return {
+              cardStyle: {
+                opacity: progress,
+              },
+            };
+          },
+        })}
+      />
+    </Stack.Navigator>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
